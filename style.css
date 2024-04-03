@@ -1,0 +1,203 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
+    url(image/cake-219595.jpg);
+  background-attachment: fixed;
+  background-position: center; /* ARKA PLANI ORTALAR */
+  background-size: cover; /*  ARKA PLANI BÜYÜKLÜĞÜNÜ KAPSAR ÖRTER */
+}
+
+/* CONTAINER /ANA TASIYICI */
+.container {
+  width: 100%;
+  height: 100vh; /* BÜTÜN EKRANIN BOYUTUNU ALMASI İÇİN VH KULLANILIR */
+  box-sizing: border-box; /* BOYUTLANDIRMAYI BİZE BIRAKIR */
+  padding: 0 10%; /*USTTEN 0 SOLDAN EKRANIN %10'u kadar bosluk */
+  color: white;
+}
+
+/* NAVBAR ALANI İLE MENU VE LOGO ÖZELLESTIRME */
+.navbar {
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 70px;
+  font-family: "Electrolize", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-top: 25px;
+}
+
+.bx {
+  font-size: 50px;
+  cursor: pointer;
+  margin-right: 30px;
+  display: none;
+  padding-left: 10px;
+}
+
+.bx:hover {
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background-color: red;
+  bottom: -4px;
+  left: 0;
+  position: absolute;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  transition: 0.3s;
+}
+
+/* NAVBAR ALANI İLE MENU VE LOGO ÖZELLESTIRME BİTİS*/
+
+/* SATIRLAMA ONE CIKAN İCERİKLERİ YERLEŞTİRME */
+
+.row {
+  display: flex;
+  margin-top: 25px;
+  align-items: center;
+}
+
+.col {
+  flex-basis: 50%;
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 100px;
+  justify-content: center;
+}
+
+p {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+button {
+  font-size: 15px;
+  height: 40px;
+  width: 150px;
+  background-color: transparent;
+  border: solid 2px beige;
+  border-radius: 5px;
+  margin-top: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+button:hover {
+  background: white;
+  border: none;
+  color: black;
+  transition: 0.3s;
+}
+
+/* SATIRLAMA ONE CIKAN İCERİKLERİ YERLEŞTİRME BİTİS */
+
+/* CART ALANLARI BOYUTLANDIRMA VE ANİMASYON */
+.card {
+  width: 200px;
+  height: 250px;
+  background: hotpink;
+  color: red;
+  display: inline-block;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px 15px;
+  box-sizing: border-box;
+  transition: transform 0.5s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+    url(image/karisik-baklava-baklavalar-66-77-B.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.card2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+    url(image/irish-desserts-1673887066.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.card3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+    url(image/waffle.webp);
+  background-position: center;
+  background-size: cover;
+}
+
+.card4 {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+    url(image/british.avif);
+  background-position: center;
+  background-size: cover;
+}
+
+.card h2,
+p {
+  text-indent: 10px;
+  padding: 2px;
+  color: #fff;
+}
+
+/* responsive yapmak için */
+
+@media (max-width: 768px) {
+  nav {
+    visibility: hidden;
+  }
+
+  .bx {
+    display: block;
+  }
+
+  .row {
+    display: block;
+  }
+
+  .card {
+    width: 200px;
+  }
+}
